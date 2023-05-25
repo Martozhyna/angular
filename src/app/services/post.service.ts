@@ -12,7 +12,7 @@ export class PostService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getPostByUserId(id: number): Observable<IPost[]> {
-    return this.httpClient.get<IPost[]>(`${urls.users}/${id}/posts`)
+  getAll(): Observable<IPost[]> {
+    return this.httpClient.get<IPost[]>(urls.posts)
   }
 }
