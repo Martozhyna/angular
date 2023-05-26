@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {IPost} from '../interfaces';
+import {IPost, IUser} from '../interfaces';
 import {urls} from '../constants';
 
 @Injectable({
@@ -13,6 +13,10 @@ export class PostService {
   }
 
   getAll(): Observable<IPost[]> {
-    return this.httpClient.get<IPost[]>(urls.posts)
+    return this.httpClient.get<IPost[]>(urls.posts.posts)
+  }
+
+  getById(id: number): Observable<IPost> {
+    return this.httpClient.get<IPost>(urls.posts.byId(id))
   }
 }
