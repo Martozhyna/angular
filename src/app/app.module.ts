@@ -9,6 +9,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { PostComponent } from './components/post/post.component';
     UserComponent,
     UserDetailsComponent,
     PostsComponent,
-    PostComponent
+    PostComponent,
+
   ],
   imports: [
     BrowserModule,

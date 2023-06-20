@@ -7,14 +7,12 @@ import {IUser} from "../../interfaces";
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
-
   @Input()
   user:IUser
 
   isShow = false
 
-  showOrHide():void {
+  showOrHide(): void {
     this.isShow = !this.isShow
-
   }
 }

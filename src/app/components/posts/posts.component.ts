@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {PostService} from '../../services';
-import {IPost} from '../../interfaces';
+import {PostService} from "../../services";
+import {IPost} from "../../interfaces";
 
 @Component({
   selector: 'app-posts',
@@ -10,14 +10,14 @@ import {IPost} from '../../interfaces';
 export class PostsComponent {
   @Input()
   userId: number;
+
   posts: IPost[];
 
-  constructor(private postService: PostService) {
+  constructor(private postService : PostService) {
   }
 
   ngOnInit(): void {
     this.postService.getPostByUserId(this.userId).subscribe(value => this.posts=value)
   }
-
 
 }

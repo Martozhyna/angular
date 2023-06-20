@@ -10,4 +10,5 @@ export class PostComponent {
   @Input()
   post: IPost;
 
+
 }
