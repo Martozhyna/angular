@@ -8,16 +8,13 @@ import {IPost} from "../../interfaces";
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent {
-  @Input()
-  userId: number;
-
   posts: IPost[];
 
   constructor(private postService : PostService) {
   }
 
   ngOnInit(): void {
-    this.postService.getPostByUserId(this.userId).subscribe(value => this.posts=value)
+    this.postService.getPosts().subscribe(value => this.posts=value)
   }
 
 }

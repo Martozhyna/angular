@@ -8,6 +8,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { PostComponent } from './components/post/post.component';
     UserDetailsComponent,
     PostsComponent,
     PostComponent,
+    PostDetailsComponent,
+    CommentsComponent,
+    CommentComponent,
 
   ],
   imports: [

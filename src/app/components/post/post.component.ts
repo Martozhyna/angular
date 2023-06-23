@@ -10,5 +10,11 @@ export class PostComponent {
   @Input()
   post: IPost;
 
+  isShow = false
+
+  showOrHide(): void {
+    this.isShow = !this.isShow
+  }
+
 
 }
